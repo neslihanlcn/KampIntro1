@@ -29,7 +29,7 @@ namespace ClassIntro
             {
                 Console.WriteLine(ders.dersAdi   );   // ders i takma ad olarak tanımladık ve dersler arrayindeki tüm
                                                       // dersleri dinamik bi şekilde dönmesi için  ders takma adı sayesinde
-                                                      // tüm derslerin adını alt alta yazdırdık
+                                                      // tüm derslerin adını kullanmadan tek bir takma ad takarak alt alta yazdırdık
             }
 
             

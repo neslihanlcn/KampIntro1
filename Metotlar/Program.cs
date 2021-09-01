@@ -13,7 +13,8 @@ namespace Metotlar   // tekrar tekrar kullanılacak kodları metot haline getire
             urun1.Adi = "kalem";
             urun1.Fiyati = 10;
             urun1.Aciklama = "uçlu kalem";
-            urun1.StokAdedi = 100;  // sadece burda eklersek diğer ürünlerde eklemezsek hata vermez ekle2() metodunda hata verirI
+            urun1.StokAdedi = 100;  // sadece burda eklersek diğer ürünlerde eklemezsek hata vermez ekle2() metodudundaki
+                                    // gibi yapı kullanırsak-önceden özellikleri parametre içine yazarsak-  hata verir
             
 
             Urun urun2 = new Urun();
@@ -47,7 +48,7 @@ namespace Metotlar   // tekrar tekrar kullanılacak kodları metot haline getire
 
 
             Urun[] urunler = new Urun[] { urun1,urun2,urun3,urun4,urun5  };
-            foreach (Urun urun in urunler ) 
+            foreach (Urun urun in urunler )   // ürünleri döndürmek için gerekli 
             {
                 Console.WriteLine(urun.Id);
                 Console.WriteLine("ADI:" + " " + urun.Adi );
@@ -77,6 +78,9 @@ namespace Metotlar   // tekrar tekrar kullanılacak kodları metot haline getire
             sepetManager.Ekle(urun3);
             sepetManager.Ekle(urun4);
             sepetManager.Ekle(urun5);
+
+            sepetManager.Add3(30);
+            
                                                             // **************
             sepetManager.Ekle2("kalem", 50, "uçlu kalem"); // ürünü bu şekilde belirtirsek stok adedini özellik olarak eklersek metoda
                                                            // gidip ekleme yaparız  ve mevcut olan tüm ürünler hata verir tek tek onlardada
@@ -86,10 +90,12 @@ namespace Metotlar   // tekrar tekrar kullanılacak kodları metot haline getire
           //KODU TEK BİR NOKTADAN YÖNETMEK KARMAŞIKLIĞI AZALTIR
             
             
-            // encapsulation örneği- parametresi veri tipi ile özellikleri
+            // encapsulation örneği- kodun parametresini veri tipi ile özelliklerini
             // parametre olarak yazarsak sayfalarca olan metodu her seferinde bu
             // şekilde çağırırız ilerledikçe bu karmaşaya yol açar
-             // parametreyi diyer urun olarak verirsek kolaylaşmış olur
+             // parametreyi  urun olarak verirsek kolaylaşmış olur
+
+            // PARAMS metodu ile istediğimiz kadar parametre kullanabiliriz overloading olmadan
         }
     } 
 }

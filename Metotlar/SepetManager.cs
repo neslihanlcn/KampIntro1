@@ -14,14 +14,21 @@ namespace Metotlar
                             // bu kısımda parametre verdiysek gerektiği zaman metot çağırırsak o metodada parametre vermek zorundayız.
 
         {
-            Console.WriteLine("Sepete eklendi:" + urun.Adi );
+            Console.WriteLine("Sepete eklendi 1:" + urun.Adi );
         }
 
         public void Ekle2(string urunAdi,int fiyat,string aciklama )  // parametreyi bu kadar karmaşık vermek yerine urun classını
                                                                       // kullanarak özellikleri orda belirtmek ve parametreyi urun olarak vermek 
                                                                       // bize kulaylık sağlar 
         {
-            Console.WriteLine("sepete eklendi"+ urunAdi );
+            Console.WriteLine("sepete eklendi 2:"+ urunAdi );
         }
+           // c# 23 dersleri youtube engin demiroğ default değerle  örnek
+        public void Add3( int sayi1, int sayi2=30) // default olarak sayi2 ye bir değer verilmezse 30 atayarak işlem yapar.
+        {
+            Console.WriteLine( sayi1+ sayi2 );
+        }
+
+        
     }
 }
